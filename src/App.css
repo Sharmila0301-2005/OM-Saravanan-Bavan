@@ -1,0 +1,1038 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffaf2;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 7%;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo span {
+  margin-right: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6b00;
+}
+
+.call-button {
+  background: #ff6b00;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 30px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.call-button:hover {
+  transform: translateY(-3px);
+  background: #e85c00;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 70px 8%;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      #ffe0a8,
+      transparent 40%
+    ),
+    #fff8eb;
+
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 650px;
+
+  animation: fadeUp 1s ease;
+}
+
+.small-title {
+  color: #ff6b00;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 75px);
+  line-height: 1.05;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #ff6b00;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #666;
+  max-width: 550px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+
+  padding: 14px 24px;
+
+  border-radius: 30px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #ff6b00;
+  color: white;
+}
+
+.secondary-btn {
+  border: 2px solid #ff6b00;
+  color: #ff6b00;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-4px);
+}
+
+.hero-fruits {
+  width: 350px;
+  height: 350px;
+
+  position: relative;
+}
+
+.hero-fruits div {
+  position: absolute;
+
+  font-size: 75px;
+
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-fruits div:nth-child(1) {
+  top: 20px;
+  left: 80px;
+}
+
+.hero-fruits div:nth-child(2) {
+  top: 130px;
+  left: 200px;
+}
+
+.hero-fruits div:nth-child(3) {
+  top: 220px;
+  left: 80px;
+}
+
+.hero-fruits div:nth-child(4) {
+  top: 100px;
+  left: 20px;
+}
+
+.hero-fruits div:nth-child(5) {
+  top: 230px;
+  left: 230px;
+}
+
+/* ================= SECTIONS ================= */
+
+.menu-section,
+.reviews-section,
+.contact-section {
+  padding: 90px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading p {
+  color: #ff6b00;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.section-heading span {
+  color: #777;
+}
+
+/* ================= MENU ================= */
+
+.menu-title {
+  font-size: 27px;
+  margin: 40px 0 25px;
+}
+
+.menu-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 20px;
+}
+
+
+/* ================= MENU CARD ================= */
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+
+  gap: 12px;
+
+  position: relative;
+
+  min-height: 270px;
+
+  padding: 25px 20px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.07);
+
+  transition: 0.3s;
+}
+
+
+/* ================= MENU CARD HOVER ================= */
+
+.menu-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= FRUIT ICON ================= */
+
+.fruit-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #fff1dd;
+
+  border-radius: 50%;
+
+  font-size: 30px;
+
+  flex-shrink: 0;
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.menu-card-content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  flex: 1;
+}
+
+
+/* ================= PRODUCT NAME ================= */
+
+.menu-card h3 {
+  margin: 5px 0 6px;
+
+  font-size: 19px;
+}
+
+
+/* ================= DESCRIPTION ================= */
+
+.menu-card p {
+  color: #888;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+/* ================= PRICE ================= */
+
+.menu-card strong {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #ff6b00;
+
+  font-size: 19px;
+}
+
+
+/* ================= AVAILABILITY ================= */
+
+.availability-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: auto;
+
+  padding: 6px 13px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* AVAILABLE */
+
+.availability-badge.available {
+  background: #e8f7ee;
+
+  color: #198754;
+}
+
+
+/* UNAVAILABLE */
+
+.availability-badge.unavailable {
+  background: #fdeaea;
+
+  color: #dc3545;
+}
+
+
+/* ================= ICE BAR ================= */
+
+.icebar-section {
+  margin: 40px 8%;
+  padding: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff8ff,
+      #efffff
+    );
+
+  overflow: hidden;
+}
+
+.icebar-content {
+  max-width: 600px;
+}
+
+.icebar-content h2 {
+  font-size: 45px;
+  margin: 10px 0 20px;
+}
+
+.icebar-content p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.ice-price {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.ice-price strong {
+  color: #ff6b00;
+}
+
+.ice-emoji {
+  font-size: 180px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ================= REVIEWS ================= */
+
+/* ============================= */
+/* Customer Review Section */
+/* ============================= */
+
+.reviews-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Review Form */
+
+.review-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Star Buttons */
+
+.star-input {
+  display: flex;
+  gap: 5px;
+}
+
+.star-input button {
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.2s;
+}
+
+.star-input button:hover {
+  transform: scale(1.2);
+}
+
+.star-input button.active-star {
+  color: gold;
+}
+
+/* Submit Button */
+
+.submit-review-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7a00;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-review-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Message */
+
+.review-message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Reviews Display */
+
+.reviews-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.review-card {
+  padding: 25px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.review-card h3 {
+  margin-bottom: 8px;
+}
+
+.review-stars {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: gold;
+}
+
+.review-card p {
+  line-height: 1.6;
+}
+
+.no-reviews {
+  margin-top: 30px;
+  font-size: 17px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .reviews-section h2 {
+    font-size: 28px;
+  }
+
+  .review-form {
+    padding: 20px;
+  }
+
+  .star-input button {
+    font-size: 28px;
+  }
+}
+/* ================= CONTACT ================= */
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
+
+  gap: 25px;
+}
+
+.contact-card {
+  text-align: center;
+
+  background: white;
+
+  padding: 35px 20px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.contact-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.small-call {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  background: #ff6b00;
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+
+  padding: 25px;
+
+  background: #171717;
+
+  color: white;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    overflow-x: auto;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding-top: 60px;
+  }
+
+  .hero-description {
+    margin: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-fruits {
+    margin-top: 40px;
+    transform: scale(0.8);
+  }
+
+  .icebar-section {
+    margin: 30px 5%;
+    padding: 45px 25px;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .icebar-content h2 {
+    font-size: 35px;
+  }
+
+  .ice-emoji {
+    margin-top: 30px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .call-button {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .nav-links {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 55px 20px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .menu-section,
+  .reviews-section,
+  .contact-section {
+    padding: 65px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+}
+
+/* ============================= */
+/* OVERALL RATING */
+/* ============================= */
+
+.overall-rating {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.average-rating {
+  text-align: center;
+  min-width: 220px;
+}
+
+.average-rating h3 {
+  font-size: 42px;
+  margin: 0;
+}
+
+.big-stars {
+  font-size: 28px;
+  color: gold;
+  margin: 10px 0;
+}
+
+/* Rating Breakdown */
+
+.rating-breakdown {
+  width: 400px;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.rating-row span:first-child {
+  width: 45px;
+}
+
+.rating-bar {
+  flex: 1;
+  height: 10px;
+  background: #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rating-bar-fill {
+  height: 100%;
+  background: gold;
+  border-radius: 10px;
+}
+
+/* ============================= */
+/* REVIEW FORM */
+/* ============================= */
+
+.review-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.review-form h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Stars */
+
+.star-input {
+  display: flex;
+  gap: 5px;
+}
+
+.star-input button {
+  border: none;
+  background: transparent;
+  color: #ccc;
+  font-size: 32px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.star-input button:hover {
+  transform: scale(1.2);
+}
+
+.star-input button.active-star {
+  color: gold;
+}
+
+/* Submit */
+
+.submit-review-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7a00;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-review-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Message */
+
+.review-message {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ============================= */
+/* CUSTOMER REVIEW CARDS */
+/* ============================= */
+
+.reviews-container {
+  max-width: 1000px;
+  margin: 40px auto;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  );
+
+  gap: 20px;
+}
+
+.review-card {
+  padding: 25px;
+  border-radius: 15px;
+  background: white;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+  text-align: left;
+}
+
+.review-card h3 {
+  margin-bottom: 8px;
+}
+
+.review-stars {
+  font-size: 22px;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  line-height: 1.6;
+}
+
+.no-reviews {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 17px;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+  .overall-rating {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .rating-breakdown {
+    width: 100%;
+  }
+
+  .review-form {
+    padding: 20px;
+  }
+
+}
